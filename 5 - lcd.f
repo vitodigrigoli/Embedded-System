@@ -1,12 +1,4 @@
 
-: CARLO  
-  4D >I2C 49 >I2C 3D >I2C 39 >I2C 
-  4D >I2C 49 >I2C 1D >I2C 19 >I2C
-  5D >I2C 59 >I2C 2D >I2C 29 >I2C
-  4D >I2C 49 >I2C CD >I2C C9 >I2C
-  4D >I2C 49 >I2C FD >I2C F9 >I2C
-  ;
-
 : 4BIT-CONFIG 
   3C >I2C 38 >I2C
   3C >I2C 38 >I2C
@@ -34,6 +26,12 @@
 : ON EC >I2C E8 >I2C ;
 : OFF 84 >I2C 40 >I2C ;
 : BLINK FC >I2C F8 >I2C ;
+: SHIFT 6C >I2C 68 >I2C ;
+
+: CURSOR 1C >I2C 18 >I2C ;
+: LEFT 8C >I2C 88 >I2C ;
+: RIGHT CC >I2C C8 >I2C ;
+
 
 : SEND_4BIT_MORE   
   0 4BIT_CLEAR DUP
@@ -51,8 +49,8 @@
 
 : SETUP_LCD 
   4BIT-CONFIG
-  SETUP_CURSOR
   LCD ON
+  LCD SHIFT
 ;
 
 
@@ -89,4 +87,47 @@
 : '= 3D >LCD ;
 : '> 3E >LCD ;
 : '? 3F >LCD ;
+
+: '@ 40 >LCD ;
+: 'A 41 >LCD ;
+: 'B 42 >LCD ;
+: 'C 43 >LCD ;
+: 'D 44 >LCD ;
+: 'E 45 >LCD ;
+: 'F 46 >LCD ;
+: 'G 47 >LCD ;
+: 'H 48 >LCD ;
+: 'I 49 >LCD ;
+: 'J 4A >LCD ;
+: 'K 4B >LCD ;
+: 'L 4C >LCD ;
+: 'M 4D >LCD ;
+: 'N 4E >LCD ;
+: 'O 4F >LCD ;
+
+: 'P 50 >LCD ;
+: 'Q 51 >LCD ;
+: 'R 52 >LCD ;
+: 'S 53 >LCD ;
+: 'T 54 >LCD ;
+: 'U 55 >LCD ;
+: 'V 56 >LCD ;
+: 'W 57 >LCD ;
+: 'X 58 >LCD ;
+: 'Y 59 >LCD ;
+: 'Z 5A >LCD ;
+: '[ 5B >LCD ;
+: '\ 5C >LCD ;
+: '] 5D >LCD ;
+: '^ 5E >LCD ;
+: '_ 5F >LCD ;
+
+: '` 60 >LCD ;
+
+
+: '{ 7B >LCD ;
+: '| 7C >LCD ;
+: '} 7D >LCD ;
+: '~ 7E >LCD ;
+: 'DEL 7F >LCD ;
 
