@@ -176,3 +176,5 @@
 : '~ 7E >LCD ;
 : 'DEL 7F >LCD ;
 
+LCD_RESET
+
