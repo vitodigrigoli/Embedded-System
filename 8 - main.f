@@ -90,8 +90,7 @@ SET_CG-CURSOR
 ;
 
 
-: MSG1 'L 'I 'V 'E 'S ': 'SPACE 2 >LCD 2 >LCD 2 >LCD ;
-: MSG2 	'D 'E 'F 'U 'S 'E 'SPACE 'T 'H 'E 'SPACE 'B 'O 'M 'B 0 >LCD ;
+: MSG1 	'D 'E 'F 'U 'S 'E 'SPACE 'T 'H 'E 'SPACE 'B 'O 'M 'B 0 >LCD ;
 
 : MAIN
 	0 ( INIT STATE )
